@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Todo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/new_todo.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html"> Home </a>
+        <a href="./todos.html">Todo List</a>
+    </nav>
+    <h1>
+        New Todo
+    </h1>
+    <hr>
+    <main>
+
+    <!-- <form action="http://localhost:8083/api/todos" method="POST"> -->
+        <!-- userid the user id, not the name -->
+        <select id=userList name="userid">
+            <option value=""> Select User </option>
+        </select>
+
+        <!-- category the category name -->
+        <select id="catList" name="category">
+            <option> Select a Category </option>
+        </select>
+
+        <!-- priority High, Medium, or Low -->
+        <select name="priority" id="priorityList">
+            <option value=""> Set Priority </option>
+            <option value="High"> High </option>
+            <option value="Medium"> Medium </option>
+            <option value="Low"> Low </option>
+        </select>
+
+        <!-- description any string -->
+        <label>
+            <h4> Task Description</h4>
+            <textarea name="description" id="description"></textarea>
+        </label>
+
+        <!-- deadline any string, but preferred as YYYY-MM-DD -->
+        <label>
+            <h4> Deadline Date (YYYY-MM-DD)</h4>
+            <input type="text" placeholder="YYYY-MM-DD" id="deadline" name="deadline">
+        </label>
+        <input type="submit" value="Save" id="saveButton" class="btn btn-success">
+    </main>
+    <!-- </form> -->
+    
+</body>
+
+</html>
